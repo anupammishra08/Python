@@ -1,4 +1,5 @@
 
+
 # shopping list
 print("Welcome to Shopping List Captain")
 
@@ -15,13 +16,17 @@ new_item = input("would you like to add something in it?(Yes/No) ")
 if new_item == ("No" or "no"):
     print("Okay!")
 
-else:
+elif new_item == ("Yes" or "yes"):
     function = int(input("on which serial no do you want to add: "))
-    item = input("which item do you want to add: ")
+    
     if function <= 5:
         shop_list.insert(function, item)
     else:
+        item = input("which item do you want to add: ")
         shop_list.append(item)
+
+else:
+    print("Sorry! It seems you did some mistake, no problem let's continue")
 
 
 # remove item
@@ -31,7 +36,7 @@ remo_item = input("Would you like to remove item from shopping list?(Yes/No) ")
 if remo_item == ("No" or "no"):
     print("Alright!")
 
-else:
+elif remo_item == ("Yes" or "yes"):
     function = int(input("of which serial no of item do you want to remove: "))
     
     if function <= 5:
@@ -39,6 +44,8 @@ else:
     else:
         item = input("Sorry! which item do you want to remove? write name: ")
         shop_list.remove(item)
+else:
+    print("Sorry! It seems you did some mistake, no problem let's continue")
         
 # check list
 check = input("do you want to check you current list(Yes/No) ")
@@ -47,7 +54,7 @@ check = input("do you want to check you current list(Yes/No) ")
 if check == ("No" or "no"):
     print("No Problem!")
 
-else:
+else: #we dont use yes condition here, for by default action
     print(shop_list)
 
 
@@ -75,7 +82,7 @@ else:
 print("slicing - ", shop_list[2:5])
 
 # earlier we use copy, here it work
-pattern = input("would you like to previous list?(type 'Skip' if you not)")
+pattern = input("would you like see to previous list?(type 'Skip' if you not)")
 if pattern == 'Skip':
     print("okay we will move forword")
 else:
@@ -106,7 +113,7 @@ else:
 # Expending
 ## use of expend()
 
-new_i = input("right your new item list ")
+new_i = input("write your new item list ")
 new_i = new_i.split()
 
 for it in new_i:
@@ -121,5 +128,7 @@ print(shop_list)
 ###these are some use of list methods###
 
 feedback_ =input("Please share you feedback ")
-print("Thank You! Hope you Enjoy I'm Practing soon improve. Bye!Bye! Have a Nice Day")
+print("Thank You! Hope you Enjoy I'm Practing soon will improve. Bye!Bye! Have a Nice Day")
+
+
 
